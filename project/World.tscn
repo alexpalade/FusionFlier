@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+
+[node name="World" type="Node2D"]
+
+[node name="Ship" type="Node2D" parent="."]
+position = Vector2( 236.774, 538.123 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="Ship"]
+texture = ExtResource( 1 )
