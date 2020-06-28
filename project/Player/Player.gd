@@ -154,20 +154,20 @@ func _input(event):
 				elif target_is_right and rocketRight:
 					rocket = rocketRight
 					rocketRight = null
-					
-				if not rocket:
-					if rocketLeft:
+				elif rocketLeft:
 						rocket = rocketLeft
 						rocketLeft = null
-					else:
-						rocket = rocketRight
-						rocketRight = null
+				elif rocketRight:
+					rocket = rocketRight
+					rocketRight = null
+
+				if not rocket:
+					return
 				
 				var rocketPosition  = rocket.global_position
 				remove_child(rocket)
 				world.add_child(rocket)
-				rocket.mode = RigidBody2D.MODE_RIGID
-				rocket.position  = rocketPosition
+				rocket.init_global_position(rocketPosition)
 				rocket.set_target(get_global_mouse_position())
 				ammunition -= 1
 				$Reloader.start()
@@ -256,7 +256,7 @@ func _on_Reloader_timeout():
 		add_child(bomb)
 	
 	if weapon == Weapon.ROCKET and ammunition < 2:
-		ammunition += 1
+
 		var rocket
 		var rocketPosition
 		var rocketLeftPosition = Vector2(-20, 0)
@@ -264,7 +264,6 @@ func _on_Reloader_timeout():
 
 		rocket = rocketScene.instance()
 		rocket.mode = RigidBody2D.MODE_KINEMATIC
-		add_child(rocket)
 		
 		var chooseLeftRocket
 		if not rocketLeft and not rocketRight:
@@ -276,10 +275,14 @@ func _on_Reloader_timeout():
 		
 		if chooseLeftRocket:
 			rocketLeft = rocket
-			rocket.position = rocketLeftPosition
+			rocketLeft.position = rocketLeftPosition
 		else:
 			rocketRight = rocket
-			rocket.position = rocketRightPosition
+			rocketRight.position = rocketRightPosition
+			
+		add_child(rocket)
+		
+		ammunition += 1
 		
 		if ammunition < 2:
 			$Reloader.start()

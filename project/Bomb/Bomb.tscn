@@ -41,11 +41,10 @@ texture = ExtResource( 2 )
 
 [node name="explosion" type="Sprite" parent="."]
 visible = false
-modulate = Color( 1, 1, 1, 0.862745 )
+modulate = Color( 0.380392, 0.333333, 0.305882, 1 )
 scale = Vector2( 5.06258, 5.06258 )
 texture = ExtResource( 1 )
 hframes = 6
-frame = 5
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -65,6 +64,7 @@ anims/explode = SubResource( 4 )
 
 [node name="ExplosionPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = 12.0
 
 [node name="SelfDestruct" type="Timer" parent="."]
 wait_time = 5.0
