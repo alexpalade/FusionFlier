@@ -41,7 +41,7 @@ texture = ExtResource( 2 )
 
 [node name="explosion" type="Sprite" parent="."]
 visible = false
-modulate = Color( 0.380392, 0.333333, 0.305882, 1 )
+modulate = Color( 0.8, 0.8, 0.8, 1 )
 scale = Vector2( 5.06258, 5.06258 )
 texture = ExtResource( 1 )
 hframes = 6

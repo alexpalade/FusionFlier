@@ -53,6 +53,7 @@ one_shot = true
 
 [node name="explosion" type="Sprite" parent="."]
 visible = false
+modulate = Color( 0.8, 0.8, 0.8, 1 )
 scale = Vector2( 1.64081, 1.64081 )
 texture = ExtResource( 1 )
 hframes = 6
