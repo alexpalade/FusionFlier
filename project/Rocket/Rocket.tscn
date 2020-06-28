@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Rocket/explosion.png" type="Texture" id=1]
+[ext_resource path="res://Rocket/Rocket.gd" type="Script" id=2]
+[ext_resource path="res://Rocket/rocket-1.png" type="Texture" id=3]
+[ext_resource path="res://Rocket/Explosion1.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Rocket/171106__qubodup__rocket-flight-loop.ogg" type="AudioStream" id=5]
+
+[sub_resource type="CapsuleShape2D" id=1]
+height = 13.5953
+
+[sub_resource type="Animation" id=2]
+resource_name = "explode"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("explosion:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 5 ]
+}
+
+[node name="Rocket" type="RigidBody2D" groups=[
+"rocket",
+]]
+mass = 0.2
+gravity_scale = 0.0
+contacts_reported = 1
+contact_monitor = true
+linear_damp = 0.0
+script = ExtResource( 2 )
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="rocket-1" type="Sprite" parent="."]
+position = Vector2( 0.205734, 0.22694 )
+texture = ExtResource( 3 )
+
+[node name="Trigger" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="SelfDestruct" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="explosion" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 1.64081, 1.64081 )
+texture = ExtResource( 1 )
+hframes = 6
+
+[node name="animation" type="AnimationPlayer" parent="."]
+anims/explode = SubResource( 2 )
+
+[node name="ExplosionPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = 3.0
+
+[node name="ThrustPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = 1.0
+[connection signal="body_entered" from="." to="." method="_on_Bullet_body_entered"]
+[connection signal="timeout" from="Trigger" to="." method="_on_Trigger_timeout"]
+[connection signal="timeout" from="SelfDestruct" to="." method="_on_SelfDestruct_timeout"]

@@ -1,0 +1,20 @@
+* TODO Exports
+* DONE Sounds
+* DONE Weapon cooldown
+* DONE Score display as time
+* TODO itch page
+* TODO Game icon
+* TODO A screenshot / gif
+* TODO Create LICENCE
+* Assets
+** Images
+- background: https://opengameart.org/content/space-background-7
+- enemies (orbs), bomb, rocket, flame, explosion: https://opengameart.org/content/superpowers-assets-various-2d
+- energy, hearts: noto sans color font
+- player ship: https://opengameart.org/content/space-shooter-art
+- music: https://opengameart.org/content/szymon-matuszewski-space-chase
+- various sfx: https://opengameart.org/content/sound-effects-mini-pack15
+- rocket thrust: https://freesound.org/people/qubodup/sounds/171106/
+- ship thrust: https://freesound.org/people/hykenfreak/sounds/214663/
+- enemy collision: https://freesound.org/people/adcbicycle/sounds/14056/
+- music: https://patrickdearteaga.com/arcade-music/

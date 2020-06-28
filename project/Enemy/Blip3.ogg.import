@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Blip3.ogg-455a57fc13b7a4bb6a8d19d989ad3217.oggstr"
+
+[deps]
+
+source_file="res://Enemy/Blip3.ogg"
+dest_files=[ "res://.import/Blip3.ogg-455a57fc13b7a4bb6a8d19d989ad3217.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

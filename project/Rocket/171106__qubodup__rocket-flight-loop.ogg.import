@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/171106__qubodup__rocket-flight-loop.ogg-5fccb99d25d27e13b1120652d5606b8e.oggstr"
+
+[deps]
+
+source_file="res://Rocket/171106__qubodup__rocket-flight-loop.ogg"
+dest_files=[ "res://.import/171106__qubodup__rocket-flight-loop.ogg-5fccb99d25d27e13b1120652d5606b8e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

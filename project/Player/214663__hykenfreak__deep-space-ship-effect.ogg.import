@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/214663__hykenfreak__deep-space-ship-effect.ogg-97ffc51088c4a25bf544e02a5106bd82.oggstr"
+
+[deps]
+
+source_file="res://Player/214663__hykenfreak__deep-space-ship-effect.ogg"
+dest_files=[ "res://.import/214663__hykenfreak__deep-space-ship-effect.ogg-97ffc51088c4a25bf544e02a5106bd82.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
