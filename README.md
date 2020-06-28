@@ -1,6 +1,6 @@
 # Fusion Flier
 
-A space action game made in Godot for the United Game Jam 2020.
+A space action game made in Godot for the United Game Jam 2020. [Screenshot](assets/screenshot.png).
 
 ## How To Play
 
