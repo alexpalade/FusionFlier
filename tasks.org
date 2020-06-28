@@ -1,11 +1,11 @@
-* TODO Exports
+* DONE Exports
 * DONE Sounds
 * DONE Weapon cooldown
 * DONE Score display as time
-* TODO itch page
-* TODO Game icon
-* TODO A screenshot / gif
-* TODO Create LICENCE
+* DONE itch page
+* DONE Game icon
+* DONE A screenshot / gif
+* DONE Create LICENCE
 * Assets
 ** Images
 - background: https://opengameart.org/content/space-background-7
