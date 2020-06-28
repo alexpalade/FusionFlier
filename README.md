@@ -1,12 +1,12 @@
 # Fusion Flier
 
-A space action game made in Godot for the United Game Jam 2020.
+A space action game made in Godot for the United Game Jam 2020. [Screenshot](assets/screenshot.png).
 
 ## How To Play
 
 You need to collect energy to survive. Energy is spawned when red circles collide with blue circles.
 
-- Left-click to fire weapons. Make the circles collide and create energy. Escape collisions.  
+- Left-click to shoot. Make the circles collide to grab energy. Escape collisions.
 - Right-click to thrust the ship around.  
 - The X key switches the weapon between rockets and bombs.
 
